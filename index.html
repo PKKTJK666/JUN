@@ -82,6 +82,7 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
+      scroll-margin-top: 20px;
     }
 
     .post time {
@@ -182,6 +183,12 @@
       margin-bottom: 8px;
     }
 
+    .archive span {
+      display: block;
+      color: var(--ink);
+      font-size: 0.86rem;
+    }
+
     .site-footer {
       border-top: 1px solid var(--line);
       background: var(--paper);
@@ -238,7 +245,7 @@
 
   <div class="layout">
     <main id="latest">
-      <article class="post">
+      <article class="post" id="diary-2082-11-03">
         <time datetime="2082-11-03">2082年11月3日</time>
         <h2>最後に、怖い</h2>
         <p>
@@ -264,7 +271,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2078-04-12">
         <time datetime="2078-04-12">2078年4月12日</time>
         <h2>病院の帰りに桜を見た</h2>
         <p>
@@ -280,7 +287,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2069-09-01">
         <time datetime="2069-09-01">2069年9月1日</time>
         <h2>定年後の平日</h2>
         <p>
@@ -296,7 +303,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2058-12-31">
         <time datetime="2058-12-31">2058年12月31日</time>
         <h2>年越しそばを半分残した</h2>
         <p>
@@ -312,7 +319,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2046-07-22">
         <time datetime="2046-07-22">2046年7月22日</time>
         <h2>古い友人と昼飯</h2>
         <p>
@@ -328,7 +335,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2039-02-06">
         <time datetime="2039-02-06">2039年2月6日</time>
         <h2>雪の日の在宅勤務</h2>
         <p>
@@ -344,7 +351,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2033-10-14">
         <time datetime="2033-10-14">2033年10月14日</time>
         <h2>引っ越しの段ボール</h2>
         <p>
@@ -360,7 +367,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2029-08-03">
         <time datetime="2029-08-03">2029年8月3日</time>
         <h2>夜の散歩で遠回りした</h2>
         <p>
@@ -376,7 +383,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2026-05-20">
         <time datetime="2026-05-20">2026年5月20日</time>
         <h2>コンビニの棚で季節を知る</h2>
         <p>
@@ -392,7 +399,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2026-05-18">
         <time datetime="2026-05-18">2026年5月18日</time>
         <h2>月曜の会議とぬるいコーヒー</h2>
         <p>
@@ -407,7 +414,7 @@
         </ul>
       </article>
 
-      <article class="post">
+      <article class="post" id="diary-2026-05-15">
         <time datetime="2026-05-15">2026年5月15日</time>
         <h2>はじめに</h2>
         <p>
@@ -433,19 +440,19 @@
       </section>
 
       <section class="side-section" id="archive">
-        <h2>アーカイブ</h2>
+        <h2>日記の日付</h2>
         <ol class="archive">
-          <li><a href="#">2082年11月</a></li>
-          <li><a href="#">2078年4月</a></li>
-          <li><a href="#">2069年9月</a></li>
-          <li><a href="#">2058年12月</a></li>
-          <li><a href="#">2046年7月</a></li>
-          <li><a href="#">2039年2月</a></li>
-          <li><a href="#">2033年10月</a></li>
-          <li><a href="#">2029年8月</a></li>
-          <li><a href="#">2026年5月</a></li>
-          <li><a href="#">2026年4月</a></li>
-          <li><a href="#">2026年3月</a></li>
+          <li><a href="#diary-2082-11-03">2082年11月3日<span>最後に、怖い</span></a></li>
+          <li><a href="#diary-2078-04-12">2078年4月12日<span>病院の帰りに桜を見た</span></a></li>
+          <li><a href="#diary-2069-09-01">2069年9月1日<span>定年後の平日</span></a></li>
+          <li><a href="#diary-2058-12-31">2058年12月31日<span>年越しそばを半分残した</span></a></li>
+          <li><a href="#diary-2046-07-22">2046年7月22日<span>古い友人と昼飯</span></a></li>
+          <li><a href="#diary-2039-02-06">2039年2月6日<span>雪の日の在宅勤務</span></a></li>
+          <li><a href="#diary-2033-10-14">2033年10月14日<span>引っ越しの段ボール</span></a></li>
+          <li><a href="#diary-2029-08-03">2029年8月3日<span>夜の散歩で遠回りした</span></a></li>
+          <li><a href="#diary-2026-05-20">2026年5月20日<span>コンビニの棚で季節を知る</span></a></li>
+          <li><a href="#diary-2026-05-18">2026年5月18日<span>月曜の会議とぬるいコーヒー</span></a></li>
+          <li><a href="#diary-2026-05-15">2026年5月15日<span>はじめに</span></a></li>
         </ol>
       </section>
 
