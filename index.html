@@ -175,8 +175,12 @@
 
     .archive {
       margin: 0;
+      max-height: min(56vh, 420px);
+      overflow-y: auto;
       padding-left: 1.1em;
+      padding-right: 8px;
       color: var(--muted);
+      scrollbar-gutter: stable;
     }
 
     .archive li {
