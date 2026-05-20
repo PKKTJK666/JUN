@@ -3,36 +3,300 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>30歳からの生活記録</title>
   <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f1eb;
+      --paper: #fffdf8;
+      --ink: #202020;
+      --muted: #6f675d;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --accent-dark: #244e51;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #f7f7f7;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, Arial, sans-serif;
+      line-height: 1.8;
+      color: var(--ink);
+      background: var(--bg);
     }
 
-    main {
-      max-width: 720px;
+    a {
+      color: var(--accent-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .header-inner {
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 40px 24px 32px;
     }
 
-    h1 {
-      margin-bottom: 16px;
-      font-size: 2.5rem;
+    .site-title {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: 0;
     }
 
-    p {
-      font-size: 1.1rem;
+    .site-description {
+      max-width: 700px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 28px;
+      font-size: 0.95rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 32px;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    .post {
+      margin-bottom: 24px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .post time {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .post h2 {
+      margin: 6px 0 14px;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .post p {
+      margin: 0 0 1em;
+    }
+
+    .post p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      padding: 3px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      background: #faf7f0;
+    }
+
+    .sidebar {
+      align-self: start;
+      position: sticky;
+      top: 20px;
+    }
+
+    .side-section {
+      margin-bottom: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .side-section h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+    }
+
+    .profile-name {
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    .small-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .archive {
+      margin: 0;
+      padding-left: 1.1em;
+      color: var(--muted);
+    }
+
+    .archive li {
+      margin-bottom: 8px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 820px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .header-inner {
+        padding: 32px 18px 24px;
+      }
+
+      .layout {
+        padding: 24px 18px 40px;
+      }
+
+      .post,
+      .side-section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Welcome to My Website</h1>
-    <p>このページはGitHub Pagesで公開するためのシンプルなWebサイトです。</p>
-  </main>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">30歳からの生活記録</h1>
+      <p class="site-description">
+        普通の会社員である僕が、30歳になった日から人生の終わりまで書き残していくつもりの日記です。大きな事件より、朝食、仕事、帰り道、考えたことを淡々と残します。
+      </p>
+      <nav class="nav" aria-label="サイト内ナビゲーション">
+        <a href="#latest">最新の日記</a>
+        <a href="#profile">プロフィール</a>
+        <a href="#archive">アーカイブ</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main id="latest">
+      <article class="post">
+        <time datetime="2026-05-20">2026年5月20日</time>
+        <h2>コンビニの棚で季節を知る</h2>
+        <p>
+          朝、会社に行く前にコンビニへ寄った。冷たい麺の棚が広くなっていて、もう夏の入口なのだと気づいた。カレンダーより、こういう棚替えのほうが季節をはっきり教えてくれる。
+        </p>
+        <p>
+          30歳になってから、時間を前より意識するようになった。焦るというより、今日のことを少しでも手元に置いておきたい感じがある。だからこの日記を始めた。
+        </p>
+        <ul class="tag-list" aria-label="タグ">
+          <li>日常</li>
+          <li>朝</li>
+          <li>30歳</li>
+        </ul>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-05-18">2026年5月18日</time>
+        <h2>月曜の会議とぬるいコーヒー</h2>
+        <p>
+          午前中の会議は長かった。話している人も、聞いている人も、たぶん同じくらい疲れていた。机の上のコーヒーが気づいたらぬるくなっていて、それでも捨てるほどではないので飲み切った。
+        </p>
+        <p>
+          帰りにスーパーで卵と豆腐を買った。特別なことは何もなかったが、こういう日を覚えていられる人でいたい。
+        </p>
+        <ul class="tag-list" aria-label="タグ">
+          <li>仕事</li>
+          <li>買い物</li>
+        </ul>
+      </article>
+
+      <article class="post">
+        <time datetime="2026-05-15">2026年5月15日</time>
+        <h2>はじめに</h2>
+        <p>
+          30歳になった。何者かになった実感はない。昨日までの自分と同じように起きて、同じように歯を磨いて、同じ駅から電車に乗った。
+        </p>
+        <p>
+          ただ、ここから先の時間を全部忘れてしまうのは惜しいと思った。死ぬまで続けられるかはわからない。でも、続けるつもりで始めることには意味がある気がする。
+        </p>
+        <ul class="tag-list" aria-label="タグ">
+          <li>はじめに</li>
+          <li>記録</li>
+        </ul>
+      </article>
+    </main>
+
+    <aside class="sidebar">
+      <section class="side-section" id="profile">
+        <h2>プロフィール</h2>
+        <p class="profile-name">一般男性 / 30歳</p>
+        <p class="small-text">
+          都内勤務の会社員。趣味は散歩、読書、深夜のラジオ。人生の終わりまで、できるだけ普通の日を書き残す予定。
+        </p>
+      </section>
+
+      <section class="side-section" id="archive">
+        <h2>アーカイブ</h2>
+        <ol class="archive">
+          <li><a href="#">2026年5月</a></li>
+          <li><a href="#">2026年4月</a></li>
+          <li><a href="#">2026年3月</a></li>
+        </ol>
+      </section>
+
+      <section class="side-section">
+        <h2>このブログについて</h2>
+        <p class="small-text">
+          生活の記録、考えたこと、忘れたくない一文を残す場所です。劇的ではない人生を、劇的ではないまま書きます。
+        </p>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 30歳からの生活記録</span>
+    </div>
+  </footer>
 </body>
 </html>
