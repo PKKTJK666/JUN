@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">最後の日記の心情</title>
+  <desc id="desc">暗い部屋で、小さなベッドと窓の光が死の直前の恐怖と孤独を表している。</desc>
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111820"/>
+      <stop offset="0.52" stop-color="#20242b"/>
+      <stop offset="1" stop-color="#3d352e"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0.63" cy="0.46" r="0.34">
+      <stop offset="0" stop-color="#f3d8a2" stop-opacity="0.5"/>
+      <stop offset="0.55" stop-color="#c99f63" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#111820" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9bb7bf"/>
+      <stop offset="1" stop-color="#2b4650"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#room)"/>
+  <rect width="1200" height="680" fill="url(#lamp)"/>
+
+  <path d="M0 520 C210 470 390 510 570 492 C820 466 1000 438 1200 470 L1200 680 L0 680 Z" fill="#15181d" opacity="0.72"/>
+  <path d="M0 566 C240 524 520 560 740 532 C940 508 1080 515 1200 545 L1200 680 L0 680 Z" fill="#0c0f14" opacity="0.64"/>
+
+  <g opacity="0.9">
+    <rect x="116" y="78" width="250" height="318" rx="4" fill="#17252c" stroke="#4d5a5d" stroke-width="4"/>
+    <rect x="140" y="104" width="94" height="268" fill="url(#window)" opacity="0.78"/>
+    <rect x="248" y="104" width="94" height="268" fill="url(#window)" opacity="0.58"/>
+    <path d="M140 302 C180 270 214 275 248 306 C280 335 308 335 342 304 L342 372 L140 372 Z" fill="#182d35" opacity="0.9"/>
+    <line x1="241" y1="104" x2="241" y2="372" stroke="#4d5a5d" stroke-width="4"/>
+    <line x1="140" y1="240" x2="342" y2="240" stroke="#4d5a5d" stroke-width="4"/>
+  </g>
+
+  <g transform="translate(440 342)">
+    <path d="M34 190 L548 190 C584 190 612 164 606 133 L592 64 C586 34 558 13 526 16 L140 49 C93 53 53 83 40 125 Z" fill="#d7c7ae"/>
+    <path d="M70 168 L586 168 L626 302 L20 302 Z" fill="#4d4138"/>
+    <path d="M95 122 C165 72 258 91 348 95 C438 100 507 79 568 126 L586 168 L70 168 Z" fill="#756655"/>
+    <ellipse cx="172" cy="76" rx="42" ry="33" fill="#c5a17a"/>
+    <path d="M126 80 C164 46 222 56 246 92 C207 87 165 95 126 80 Z" fill="#1b1b1f"/>
+    <path d="M210 132 C300 92 430 100 548 137 L568 168 L164 168 Z" fill="#2b3038"/>
+    <path d="M78 302 L48 338 M602 302 L640 338" stroke="#211b18" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.75">
+    <path d="M746 102 C780 172 774 234 742 293 C718 338 705 383 730 434" fill="none" stroke="#cab58c" stroke-width="3"/>
+    <path d="M786 106 C810 180 805 250 768 318 C744 362 748 407 786 454" fill="none" stroke="#826f55" stroke-width="2"/>
+    <circle cx="746" cy="101" r="6" fill="#d8c196"/>
+    <circle cx="786" cy="106" r="5" fill="#a58b66"/>
+  </g>
+
+  <g transform="translate(835 256)">
+    <rect x="112" y="104" width="32" height="150" rx="8" fill="#2a2220"/>
+    <path d="M58 90 C78 28 175 28 196 90 Z" fill="#b88348"/>
+    <path d="M76 90 C90 51 163 51 178 90 Z" fill="#f0cf8c" opacity="0.5"/>
+    <rect x="34" y="90" width="186" height="20" rx="10" fill="#6a4b33"/>
+    <ellipse cx="128" cy="258" rx="86" ry="14" fill="#111014" opacity="0.8"/>
+  </g>
+
+  <path d="M730 530 C788 458 855 438 925 500 C970 540 1022 540 1088 498 C1030 590 915 625 808 594 C772 584 748 564 730 530 Z" fill="#05070b" opacity="0.56"/>
+  <path d="M94 620 C218 574 354 574 474 626" fill="none" stroke="#394048" stroke-width="2" opacity="0.45"/>
+  <path d="M102 644 C234 604 371 610 514 650" fill="none" stroke="#6e665b" stroke-width="2" opacity="0.3"/>
+
+  <text x="82" y="610" fill="#d9cbb6" font-family="serif" font-size="28" opacity="0.72">まだ、朝になってほしい。</text>
+</svg>
