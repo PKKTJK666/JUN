@@ -293,7 +293,10 @@ a:hover {
   min-height: 100vh;
   margin: 0;
   border: 0;
-  background: #050505;
+  background:
+    radial-gradient(circle at 50% 36%, rgba(120, 0, 0, 0.55), transparent 34%),
+    repeating-linear-gradient(0deg, rgba(255, 0, 0, 0.08) 0 1px, transparent 1px 5px),
+    #010101;
 }
 
 .face-stage {
@@ -304,28 +307,32 @@ a:hover {
 }
 
 .face-frame {
-  width: min(92vw, 760px);
+  width: min(94vw, 860px);
   margin: 0;
 }
 
 .face-photo-wrap {
   position: relative;
   overflow: hidden;
-  border: 1px solid #111;
+  border: 2px solid #260000;
   background: #000;
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 34px rgba(255, 0, 0, 0.5),
+    0 0 90px rgba(0, 0, 0, 0.95);
 }
 
 .face-photo-wrap img {
   display: block;
   width: 100%;
   height: auto;
+  filter: grayscale(0.75) contrast(1.9) brightness(0.55) saturate(1.9) hue-rotate(-18deg);
+  transform: scale(1.04);
 }
 
 .tear {
   position: absolute;
-  width: 3.8%;
-  height: 10%;
+  width: 2.8%;
+  height: 13%;
   border-radius: 55% 55% 65% 65%;
   background: linear-gradient(
     180deg,
@@ -338,20 +345,52 @@ a:hover {
 }
 
 .tear-left {
-  top: 40%;
-  left: 42%;
+  top: 30%;
+  left: 39%;
   transform: rotate(8deg);
 }
 
 .tear-right {
-  top: 41%;
-  left: 55%;
+  top: 31%;
+  left: 50%;
   transform: rotate(-7deg);
+}
+
+.fear-eye {
+  position: absolute;
+  width: 3.8%;
+  height: 3.8%;
+  border-radius: 999px;
+  background: radial-gradient(circle, #fff 0 17%, #ff1f1f 20% 42%, rgba(255, 0, 0, 0) 70%);
+  filter: blur(1px);
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+.fear-eye-left {
+  top: 30%;
+  left: 38%;
+}
+
+.fear-eye-right {
+  top: 31%;
+  left: 50%;
+}
+
+.face-noise {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 0, 0, 0.18), transparent 14%, rgba(0, 255, 255, 0.1) 18%, transparent 30%),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 4px);
+  mix-blend-mode: screen;
+  opacity: 0.38;
+  pointer-events: none;
 }
 
 .face-frame figcaption {
   margin-top: 8px;
-  color: #d8d8d8;
+  color: #c6b6b6;
   font-size: 0.78rem;
   text-align: center;
 }
