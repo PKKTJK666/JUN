@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">泣きながら笑っている架空の高年男性の顔</title>
+  <desc id="desc">実在人物ではない、生成された3D風の不気味な高年男性の顔画像。</desc>
+  <defs>
+    <radialGradient id="skin" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#d7b298"/>
+      <stop offset="0.45" stop-color="#9b6f60"/>
+      <stop offset="1" stop-color="#3a2225"/>
+    </radialGradient>
+    <radialGradient id="void" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#300004"/>
+      <stop offset="0.55" stop-color="#070203"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <linearGradient id="tear" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8ffff" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#6ac8ff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="5" seed="13"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="#030202"/>
+  <ellipse cx="600" cy="450" rx="470" ry="420" fill="url(#void)"/>
+  <ellipse cx="600" cy="438" rx="315" ry="370" fill="url(#skin)" filter="url(#rough)"/>
+  <path d="M344 407c-52-128 22-276 154-318 23 35 31 72 20 109 76-64 183-70 260-18-12 21-14 42-5 64 49-6 90 12 123 54-23 19-34 41-34 66 51 71 49 201-9 302-60 106-147 159-253 159-115 0-206-64-264-181-41-83-38-164 8-237z" fill="#14100f" opacity="0.72"/>
+  <ellipse cx="600" cy="448" rx="260" ry="324" fill="url(#skin)"/>
+
+  <path d="M420 375c54-43 113-45 176-4" fill="none" stroke="#1a0708" stroke-width="22" stroke-linecap="round"/>
+  <path d="M610 374c71-40 132-36 183 9" fill="none" stroke="#1a0708" stroke-width="22" stroke-linecap="round"/>
+  <ellipse cx="493" cy="425" rx="57" ry="42" fill="#f2ece3"/>
+  <ellipse cx="710" cy="425" rx="57" ry="42" fill="#f2ece3"/>
+  <circle cx="503" cy="428" r="19" fill="#230004"/>
+  <circle cx="701" cy="428" r="19" fill="#230004"/>
+  <circle cx="503" cy="428" r="8" fill="#ff2a2a"/>
+  <circle cx="701" cy="428" r="8" fill="#ff2a2a"/>
+  <circle cx="496" cy="420" r="5" fill="#fff"/>
+  <circle cx="694" cy="420" r="5" fill="#fff"/>
+
+  <path d="M571 452c-13 42-28 78-45 108 24 15 55 17 91 4" fill="none" stroke="#442121" stroke-width="16" stroke-linecap="round"/>
+  <path d="M421 599c118 94 250 99 376 8" fill="none" stroke="#220305" stroke-width="44" stroke-linecap="round"/>
+  <path d="M435 584c107 56 224 59 351 5" fill="none" stroke="#f4e2d4" stroke-width="22" stroke-linecap="round"/>
+  <path d="M456 622c92 44 195 46 309 3" fill="none" stroke="#67020a" stroke-width="26" stroke-linecap="round"/>
+
+  <path d="M421 466c-40 102-38 188 5 258" fill="none" stroke="#1e0b0d" stroke-width="10" stroke-linecap="round" opacity="0.45"/>
+  <path d="M783 468c42 104 37 191-15 262" fill="none" stroke="#1e0b0d" stroke-width="10" stroke-linecap="round" opacity="0.45"/>
+  <path d="M503 461c-38 115-46 203-22 264" fill="none" stroke="#54292c" stroke-width="8" stroke-linecap="round" opacity="0.42"/>
+  <path d="M695 461c42 117 52 205 31 266" fill="none" stroke="#54292c" stroke-width="8" stroke-linecap="round" opacity="0.42"/>
+
+  <path d="M480 455c-15 73-19 144-10 214" fill="none" stroke="url(#tear)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M718 457c19 77 22 152 7 225" fill="none" stroke="url(#tear)" stroke-width="24" stroke-linecap="round"/>
+  <ellipse cx="472" cy="683" rx="19" ry="31" fill="url(#tear)"/>
+  <ellipse cx="725" cy="697" rx="21" ry="34" fill="url(#tear)"/>
+
+  <ellipse cx="600" cy="450" rx="520" ry="410" fill="none" stroke="#710008" stroke-width="28" opacity="0.4" filter="url(#soft)"/>
+  <path d="M0 0h1200v900H0z" fill="none" stroke="#1a0000" stroke-width="40"/>
+  <g opacity="0.18">
+    <path d="M80 126h1040M80 244h1040M80 362h1040M80 480h1040M80 598h1040M80 716h1040" stroke="#fff" stroke-width="2"/>
+  </g>
+</svg>
