@@ -131,6 +131,7 @@ a:hover {
 .post h2 {
   margin: 0 0 14px;
   padding-bottom: 5px;
+  min-height: 1.8em;
   font-size: clamp(1.2rem, 2.5vw, 1.65rem);
 }
 
@@ -154,6 +155,23 @@ a:hover {
 
 .diary-collapsed .post.is-open h2::before {
   content: "- ";
+}
+
+.diary-collapsed .post h2[aria-label="無題"]::before {
+  content: "";
+}
+
+.void-link {
+  display: inline-block;
+  min-width: 1.2em;
+  color: #111;
+  text-decoration: none;
+}
+
+.void-link:hover,
+.void-link:focus {
+  color: #b00000;
+  background: #fff6a8;
 }
 
 .diary-collapsed .post h2:focus {
@@ -268,4 +286,72 @@ a:hover {
   .nav a {
     margin-right: 10px;
   }
+}
+
+.face-page {
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  background: #050505;
+}
+
+.face-stage {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 18px;
+}
+
+.face-frame {
+  width: min(92vw, 760px);
+  margin: 0;
+}
+
+.face-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #111;
+  background: #000;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.2);
+}
+
+.face-photo-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tear {
+  position: absolute;
+  width: 3.8%;
+  height: 10%;
+  border-radius: 55% 55% 65% 65%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(105, 180, 255, 0.68) 45%,
+    rgba(255, 255, 255, 0.25)
+  );
+  filter: blur(0.5px);
+  opacity: 0.85;
+}
+
+.tear-left {
+  top: 40%;
+  left: 42%;
+  transform: rotate(8deg);
+}
+
+.tear-right {
+  top: 41%;
+  left: 55%;
+  transform: rotate(-7deg);
+}
+
+.face-frame figcaption {
+  margin-top: 8px;
+  color: #d8d8d8;
+  font-size: 0.78rem;
+  text-align: center;
 }
