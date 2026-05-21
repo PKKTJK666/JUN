@@ -231,6 +231,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
@@ -559,5 +560,67 @@
       <span>&copy; 2026 長岡俊樹 / 30歳からの生活記録</span>
     </div>
   </footer>
+  <script>
+    (() => {
+      document.body.classList.add("diary-collapsed");
+
+      const posts = document.querySelectorAll(".post");
+
+      const setOpen = (post, open) => {
+        const title = post.querySelector("h2");
+        post.classList.toggle("is-open", open);
+        if (title) {
+          title.setAttribute("aria-expanded", String(open));
+        }
+      };
+
+      posts.forEach((post) => {
+        const title = post.querySelector("h2");
+        if (!title) {
+          return;
+        }
+
+        title.setAttribute("role", "button");
+        title.setAttribute("tabindex", "0");
+        title.setAttribute("aria-expanded", "false");
+
+        title.addEventListener("click", () => {
+          setOpen(post, !post.classList.contains("is-open"));
+        });
+
+        title.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") {
+            return;
+          }
+
+          event.preventDefault();
+          setOpen(post, !post.classList.contains("is-open"));
+        });
+      });
+
+      const openFromHash = () => {
+        if (!location.hash) {
+          return;
+        }
+
+        const post = document.querySelector(location.hash);
+        if (post && post.classList.contains("post")) {
+          setOpen(post, true);
+        }
+      };
+
+      document.querySelectorAll('.archive a[href^="#diary-"]').forEach((link) => {
+        link.addEventListener("click", () => {
+          const post = document.querySelector(link.getAttribute("href"));
+          if (post) {
+            setOpen(post, true);
+          }
+        });
+      });
+
+      openFromHash();
+      window.addEventListener("hashchange", openFromHash);
+    })();
+  </script>
 </body>
 </html>
